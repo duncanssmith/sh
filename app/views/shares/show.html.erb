@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @share.name %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%= @share.code %>
+</p>
+
+<p>
+  <b>Current price:</b>
+  <%= @share.current_price %>
+</p>
+
+
+<%= link_to 'Edit', edit_share_path(@share) %> |
+<%= link_to 'Back', shares_path %>
