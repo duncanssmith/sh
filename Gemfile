@@ -28,3 +28,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+#
+
+gem "will_paginate", ">= 2.3.12"
+gem "haml", ">=2.2.18"
+
+
