@@ -1,4 +1,5 @@
 *.*~
+db/migrate/*.*~
 log/*
 log/production.log
 log/development.log
