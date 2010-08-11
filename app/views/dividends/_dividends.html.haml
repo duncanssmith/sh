@@ -1,0 +1,42 @@
+-#= will_paginate @dividends
+
+%table.index_data
+  %tr 
+    %th Dividend
+    %th Dividend price
+    %th Date
+    %th Xddate
+    %th Share
+    %th Shares held on xddate
+    %th Tax
+    %th &nbsp;
+    %th &nbsp;
+    %th &nbsp;
+  
+
+  - @dividends.each do |dividend|
+    - share = Share.find(dividend.share_id)
+    %tr{:class => cycle('list-line-odd', 'list-line-even')}
+      %td 
+        = number_to_currency(dividend.dividend.to_f / 100, :precision => 2, :unit => "&pound;")
+      %td 
+        = number_to_currency(dividend.dividend_price.to_f / 1000000, :precision => 2, :unit => "")
+      %td 
+        = dividend.date 
+      %td 
+        = dividend.xddate 
+      %td 
+        -#= dividend.share_id 
+        = share.code
+      %td 
+        = number_to_currency(dividend.shares_held_on_xddate.to_f / 1000000, :precision => 6, :unit => "")
+      %td 
+        = number_to_currency(dividend.tax.to_f / 100, :precision => 2, :unit => "&pound;")
+      %td 
+        = link_to 'Show', dividend 
+      %td 
+        = link_to 'Edit', edit_dividend_path(dividend) 
+      %td 
+        = link_to 'Destroy', dividend, :confirm => 'Are you sure?', :method => :delete 
+  
+-#= will_paginate @dividends

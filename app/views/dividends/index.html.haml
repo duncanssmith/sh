@@ -1,0 +1,19 @@
+%h1 Dividends
+
+- if @dividends.blank?
+  %p 
+    There are no dividends
+- else
+  -#- javascript "pagination"
+
+= form_tag dividends_path, :method => :get, :remote => true do
+  %p
+    = text_field_tag :search, params[:search]
+    = submit_tag "Search", :name => nil
+
+%div#dividends
+  = render :partial => 'dividends'
+
+%br
+
+= link_to 'New Dividend', new_dividend_path 

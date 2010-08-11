@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Dividend:</b>
+  <%= @dividend.dividend %>
+</p>
+
+<p>
+  <b>Dividend price:</b>
+  <%= @dividend.dividend_price %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @dividend.date %>
+</p>
+
+<p>
+  <b>Xddate:</b>
+  <%= @dividend.xddate %>
+</p>
+
+<p>
+  <b>Share:</b>
+  <%= @dividend.share_id %>
+</p>
+
+<p>
+  <b>Shares held on xddate:</b>
+  <%= @dividend.shares_held_on_xddate %>
+</p>
+
+<p>
+  <b>Tax:</b>
+  <%= @dividend.tax %>
+</p>
+
+
+<%= link_to 'Edit', edit_dividend_path(@dividend) %> |
+<%= link_to 'Back', dividends_path %>
