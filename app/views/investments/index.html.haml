@@ -1,0 +1,43 @@
+%h1 Listing investments
+
+%table
+  %tr
+    %th Investment
+    %th Date
+    %th Share
+    %th Pps
+    %th Duty
+    %th Commission
+    %th Shares purchased
+    %th &nbsp;
+    %th &nbsp;
+    %th &nbsp;
+
+  - @investments.each do |investment|
+    - share = Share.find(investment.share_id)
+    %tr 
+      %td
+        = number_to_currency(investment.investment.to_f / 100, :precision => 2, :unit => "&pound;")
+      %td
+        = investment.date
+      %td
+        -#= investment.share_id
+        = share.code
+      %td
+        = number_to_currency(investment.pps.to_f / 1000000, :precision => 2, :unit => "")
+      %td
+        = number_to_currency(investment.duty.to_f / 100, :precision => 2, :unit => "&pound;")
+      %td
+        = number_to_currency(investment.commission.to_f / 100, :precision => 2, :unit => "&pound;")
+      %td
+        = number_to_currency(investment.shares_purchased.to_f / 1000000, :precision => 6, :unit => "")
+      %td
+        = link_to 'Show', investment
+      %td
+        = link_to 'Edit', edit_investment_path(investment)
+      %td
+        = link_to 'Destroy', investment, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Investment', new_investment_path

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Investment:</b>
+  <%= @investment.investment %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @investment.date %>
+</p>
+
+<p>
+  <b>Share:</b>
+  <%= @investment.share_id %>
+</p>
+
+<p>
+  <b>Pps:</b>
+  <%= @investment.pps %>
+</p>
+
+<p>
+  <b>Duty:</b>
+  <%= @investment.duty %>
+</p>
+
+<p>
+  <b>Commission:</b>
+  <%= @investment.commission %>
+</p>
+
+<p>
+  <b>Shares purchased:</b>
+  <%= @investment.shares_purchased %>
+</p>
+
+
+<%= link_to 'Edit', edit_investment_path(@investment) %> |
+<%= link_to 'Back', investments_path %>
