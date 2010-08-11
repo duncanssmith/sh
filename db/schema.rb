@@ -10,7 +10,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100804135613) do
+ActiveRecord::Schema.define(:version => 20100809134903) do
+
+  create_table "dividends", :force => true do |t|
+    t.integer  "dividend"
+    t.integer  "dividend_price"
+    t.date     "date"
+    t.date     "xddate"
+    t.integer  "share_id"
+    t.integer  "shares_held_on_xddate"
+    t.integer  "tax"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "investments", :force => true do |t|
+    t.integer  "investment"
+    t.date     "date"
+    t.integer  "share_id"
+    t.integer  "pps"
+    t.integer  "duty"
+    t.integer  "commission"
+    t.integer  "shares_purchased"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "shares", :force => true do |t|
     t.string   "name"
