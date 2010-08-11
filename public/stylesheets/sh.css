@@ -1,0 +1,212 @@
+body {
+  font-size: 8pt;
+  color: #333333;
+  background: white;
+  font-family: verdana, tahoma, arial, helvetica, sans-serif;
+  margin: 10px;
+  padding: 10px; }
+
+h1 {
+  font-size: 12pt;
+  color: #aa9999; }
+
+h2 {
+  font-size: 11pt;
+  color: #aa9999; }
+
+#client h3 {
+  font-size: 9pt;
+  color: #22aa22; }
+
+h3 {
+  font-size: 9pt;
+  color: #666666; }
+
+h4 {
+  font-size: 8pt;
+  color: #aa9999; }
+
+h5 {
+  font-size: 7pt;
+  color: #aa9999; }
+
+h6 {
+  font-size: 6pt;
+  color: #aa9999; }
+
+p {
+  font-size: 8pt;
+  color: #666666; }
+
+table.index_data {
+  background-image: none;
+  margin: 0px;
+  border: 3px solid #eeaaaa;
+  padding: 0px;
+  font-size: 8pt; }
+  table.index_data tr {
+    background-image: none; }
+    table.index_data tr th {
+      background: #eeaaaa;
+      color: #e3e3e3;
+      padding-left: 4px;
+      padding-right: 4px;
+      height: 32px; }
+    table.index_data tr td {
+      background-image: none;
+      height: 26px; }
+  table.index_data tr.list-line-odd {
+    background: #e6e6e9; }
+  table.index_data tr.list-line-even {
+    background: #eeeef2; }
+
+#appcontent div {
+  font-size: 8pt;
+  color: red;
+  border: solid 0px red; }
+
+div.habtm {
+  border: solid 0px red; }
+  div.habtm table {
+    background-color: #f3f3f3;
+    color: gray;
+    font-size: 8pt;
+    border: solid 1px silver; }
+    div.habtm table tr {
+      color: green; }
+      div.habtm table tr td.cellamber {
+        color: white;
+        font-weight: bold;
+        background-color: #eeee33; }
+      div.habtm table tr td.cellred {
+        color: white;
+        font-weight: bold;
+        background-color: #ff3333; }
+      div.habtm table tr td.cellgreen {
+        color: white;
+        font-weight: bold;
+        background-color: #33cc66; }
+      div.habtm table tr td {
+        color: #333333;
+        border: solid 1px silver; }
+
+#main {
+  border: solid 1px blue;
+  width: 940px;
+  padding: 10px;
+  margin: 4px;
+  background: white; }
+  #main div {
+    float: left;
+    border: solid 1px red; }
+    #main div div {
+      border: solid 1px yellow;
+      margin: 4px;
+      width: 185px;
+      float: left; }
+      #main div div div {
+        border: solid 0px green;
+        width: 200px;
+        float: right; }
+        #main div div div div {
+          border: solid 1px purple;
+          width: 200px;
+          float: right; }
+
+.content h1 {
+  color: #ccaaaa; }
+.content table {
+  font-size: 8pt;
+  color: #333333; }
+  .content table tr {
+    font-size: 8pt;
+    color: #333333; }
+    .content table tr th {
+      font-size: 8pt;
+      background: #eeaaaa;
+      color: #e3e3e3;
+      padding-left: 4px;
+      padding-right: 4px;
+      height: 32px; }
+    .content table tr td {
+      font-size: 8pt;
+      color: #333333; }
+
+#user_nav {
+  float: right;
+  color: #666666; }
+
+.navbar {
+  padding: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 20px;
+  background-color: green; }
+
+table.nav {
+  padding: 0px;
+  padding-left: 2px;
+  padding-right: 0px;
+  padding-bottom: 2px;
+  margin: 2px;
+  margin: 2px;
+  border: solid 0px silver; }
+
+td.nav {
+  padding: 1px;
+  padding-left: 6px;
+  padding-right: 7px;
+  margin: 2px;
+  border: solid 1px silver;
+  border-left: solid 1px silver; }
+
+#dashboard table {
+  padding: 2px;
+  background-color: #e0e0e0;
+  color: blue;
+  border: solid 1px silver; }
+  #dashboard table td {
+    color: green;
+    vertical-align: top;
+    padding: 8px;
+    background-color: #d0d0d0;
+    border: solid 1px white; }
+    #dashboard table td h3 {
+      color: #22aa22; }
+    #dashboard table td h4 {
+      color: #666666; }
+
+#dashboard_inner table th {
+  background-color: #f3f3f3;
+  color: #666690; }
+#dashboard_inner table td {
+  background-color: #f3f3f3;
+    background-color-color: #666690; }
+#dashboard_inner table td.num {
+  text-align: right; }
+
+div.graph {
+  color: blue; }
+
+#graph_1 {
+  color: red; }
+
+div.underlinemenu {
+  font-size: 7pt;
+  font-weight: bold;
+  background: #eecccc;
+  width: 100%; }
+  div.underlinemenu ul {
+    padding: 10px 0px 14px 0px;
+    margin: 0;
+    text-align: left; }
+    div.underlinemenu ul ul li {
+      display: inline; }
+      div.underlinemenu ul ul li a {
+        color: #ffaaaa;
+        padding: 10px 3px 4px 3px;
+        background: #eecccc;
+        margin-right: 20px;
+        text-decoration: none;
+        border-bottom: 2px solid #eecccc; }
+        div.underlinemenu ul ul li a .hover .selected {
+          border-bottom-color: #eeeeee; }

@@ -1,0 +1,272 @@
+!appcontentfontsize = 8pt
+!bodyfontsize = 8pt
+!bodytextcolor = #333 
+!bodybgcolor = #fff
+!bodymargin = 10px
+!bodypadding = 10px
+
+!tablefontsize = 8pt
+!tableheaderfontsize = 8pt
+!tablefontcolor =  #333
+!tableheadercolor = #eaa 
+!tableheadertextcolor = #e3e3e3 
+!tableheaderpadding = 4px 
+!tableheadermargin = 4px 
+!tablebgcolor = #fff
+!tableborder = 0px 
+!tablemargin = 0px
+!tablepadding = 0px
+!tablebackgroundcolor = #e0e0e0
+!tablecellbackgroundcolor = #d0d0d0
+!tablebackgroundcolordashboard_inner = #f3f3f3
+
+!paragraphfontsize = 8pt
+!paragraphtextcolor = #666 
+
+!listlineoddcolor = #e6e6e9
+!listlineevencolor = #eeeef2
+
+!h1size = 12pt
+!h2size = 11pt
+!h3size = 9pt
+!h3color = #22aa22 
+!h3clientcolor = #666666 
+!h4size = 8pt
+!h5size = 7pt
+!h6size = 6pt
+!h1color = #a99 
+
+body
+  font-size = !bodyfontsize
+  color = !bodytextcolor
+  background = !bodybgcolor
+  font-family: verdana,tahoma,arial,helvetica,sans-serif
+  margin = !bodymargin
+  padding = !bodypadding
+
+h1
+  font-size = !h1size
+  color = !h1color
+
+h2
+  font-size = !h2size
+  color = !h1color
+
+#client
+  h3
+    font-size = !h3size
+    color = !h3color
+
+h3
+  font-size = !h3size
+  color = !h3clientcolor
+
+h4
+  font-size = !h4size
+  color = !h1color
+
+h5
+  font-size = !h5size
+  color = !h1color
+
+h6
+  font-size = !h6size
+  color = !h1color
+
+p
+  font-size = !paragraphfontsize
+  color = !paragraphtextcolor
+
+table.index_data
+  background-image: none 
+  margin = !tablemargin
+  border: 3px solid !tableheadercolor
+  padding = !tablepadding
+  font-size = !tablefontsize
+  tr
+    background-image: none 
+    th
+      //background-image: url('../../../images/green_button.png')
+      background = !tableheadercolor
+      color = !tableheadertextcolor
+      padding-left = !tableheaderpadding
+      padding-right = !tableheaderpadding
+      height: 32px
+    td
+      background-image: none 
+      height: 26px
+  tr.list-line-odd
+    background = !listlineoddcolor
+  tr.list-line-even
+    background = !listlineevencolor
+
+
+#appcontent
+  
+  div
+    font-size = !appcontentfontsize
+    color: red
+    border: solid 0px red
+
+div.habtm
+  border: solid 0px red
+  table
+    background-color = !tablebackgroundcolordashboard_inner 
+    color: gray
+    font-size = !appcontentfontsize
+    border: solid 1px silver
+    tr
+      color: green
+      td.cellamber
+        color: #fff
+        font-weight: bold
+        background-color: #ee3
+      td.cellred
+        color: #fff
+        font-weight: bold
+        background-color: #f33
+      td.cellgreen
+        color: #fff
+        font-weight: bold
+        background-color: #3c6
+      td
+        color = !bodytextcolor
+        border: solid 1px silver
+
+#main
+  border: solid 1px blue
+  width: 940px
+  padding: 10px
+  margin: 4px
+  background: #fff
+
+  div
+    float: left
+    border: solid 1px red
+
+    div
+      border: solid 1px yellow
+      margin: 4px
+      width: 185px
+      float: left
+
+      div
+        border: solid 0px green
+        width: 200px
+        float: right
+
+        div
+          border: solid 1px purple
+          width: 200px
+          float: right
+
+.content
+  h1
+    color: #caa
+
+  table
+    font-size = !tablefontsize
+    color = !tablefontcolor
+    tr
+      font-size = !tablefontsize
+      color = !tablefontcolor
+      th
+        font-size = !tablefontsize
+        background = !tableheadercolor
+        color = !tableheadertextcolor
+        padding-left = !tableheaderpadding
+        padding-right = !tableheaderpadding
+        height: 32px
+      td
+        font-size = !tablefontsize
+        color = !tablefontcolor
+
+
+
+#user_nav 
+  float: right
+  color: #666
+
+
+.navbar
+  padding: 2px
+  padding-bottom: 2px
+  margin-bottom: 20px
+  background-color: green
+
+
+table.nav
+  padding: 0px
+  padding-left: 2px
+  padding-right: 0px
+  padding-bottom: 2px
+  margin: 2px
+  margin: 2px
+  border: solid 0px silver
+
+
+td.nav
+  padding: 1px
+  padding-left: 6px
+  padding-right: 7px
+  margin: 2px
+  border: solid 1px silver
+  border-left: solid 1px silver
+
+
+#dashboard
+  table
+    padding: 2px
+    background-color = !tablebackgroundcolor 
+    color: blue
+    border: solid 1px silver
+    td
+      color: green
+      vertical-align: top
+      padding: 8px
+      background-color = !tablecellbackgroundcolor
+      border: solid 1px white
+      h3
+        color: #22aa22
+      h4
+        color: #666666
+
+#dashboard_inner
+  table
+    th
+      background-color = !tablebackgroundcolordashboard_inner 
+      color: #666690 
+    td
+      background-color = !tablebackgroundcolordashboard_inner
+        color: #666690 
+    td.num
+      text-align: right
+
+div.graph
+  color: blue
+#graph_1
+  color: red
+
+
+div.underlinemenu
+  font-size: 7pt
+  font-weight: bold
+  background: #ecc
+  width: 100%
+  ul
+    padding: 10px 0px 14px 0px 
+    margin: 0
+    text-align: left
+    ul li
+      display: inline
+      a
+        color: #faa
+        padding: 10px 3px 4px 3px
+        background: #ecc
+        margin-right: 20px
+        text-decoration: none
+        border-bottom: 2px solid #ecc
+        .hover .selected
+          border-bottom-color: #eeeeee
+
+
