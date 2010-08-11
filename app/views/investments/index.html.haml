@@ -1,6 +1,6 @@
-%h1 Listing investments
+%h1 Investments
 
-%table
+%table.index_data
   %tr
     %th Investment
     %th Date
@@ -15,7 +15,7 @@
 
   - @investments.each do |investment|
     - share = Share.find(investment.share_id)
-    %tr 
+    %tr{:class => cycle('list-line-odd', 'list-line-even')}
       %td
         = number_to_currency(investment.investment.to_f / 100, :precision => 2, :unit => "&pound;")
       %td
