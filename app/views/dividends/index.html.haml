@@ -6,13 +6,13 @@
 - else
   -#- javascript "pagination"
 
-= form_tag dividends_path, :method => :get, :remote => true do
+= form_tag dividends_path, :method => :get, :remote => false do
   %p
     = text_field_tag :search, params[:search]
     = submit_tag "Search", :name => nil
 
 %div#dividends
-  = render :partial => 'dividends'
+  ~ render :partial => 'dividends'
 
 %br
 

@@ -2,17 +2,11 @@ class DividendsController < ApplicationController
   # GET /dividends
   # GET /dividends.xml
   def index
-    @dividends = Dividend.all
-
-		if params[:search]
-		  @dividends = Dividend.find(:all, :conditions => ['dividend LIKE ?', "%#{params[:search]}%"])
-		else
-			@dividends = Dividend.find(:all)
-    end
+		@dividends = Dividend.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb
-      format.js # index.html.erb
+      format.js # index.js.erb
       format.xml  { render :xml => @dividends }
     end
   end
