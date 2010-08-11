@@ -1,4 +1,8 @@
 Sh::Application.routes.draw do
+  resources :investments
+
+  resources :dividends
+
   resources :shares
 
   # The priority is based upon order of creation:
