@@ -30,7 +30,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # end
 #
 
-gem "will_paginate", ">= 2.3.12"
+gem "will_paginate", "~> 3.0.pre2"
 gem "haml", ">=2.2.18"
 
 
