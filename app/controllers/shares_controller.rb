@@ -3,10 +3,12 @@ class SharesController < ApplicationController
   # GET /shares.xml
   def index
     #@shares = Share.all
-    @shares = Share.all(:order => "code ASC")
-    
+    #@shares = Share.all(:order => "code ASC")
+    @shares = Share.search(params[:search])
+
     respond_to do |format|
       format.html # index.html.erb
+      format.js # index.js.erb
       format.xml  { render :xml => @shares }
     end
   end

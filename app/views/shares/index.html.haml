@@ -1,30 +1,21 @@
-%h1 Listing shares
+%h1 Shares
 
-%table 
-  %tr 
-    %th Name
-    %th Code
-    %th Current price
-    %th &nbsp;
-    %th &nbsp;
-    %th &nbsp;
 
-  - @shares.each do |share| 
+- if @shares.blank?
+  %p
+    There are no shares
+-else
+  -# javascript "pagination"
 
-    %tr 
-      %td 
-        = share.name 
-      %td 
-        = share.code 
-      %td 
-        = number_to_currency(share.current_price.to_f / 100, :precision => 2, :unit => "")
-      %td 
-        = link_to 'Show', share 
-      %td 
-        = link_to 'Edit', edit_share_path(share) 
-      %td 
-        = link_to 'Destroy', share, :confirm => 'Are you sure?', :method => :delete 
-  
+
+= form_tag shares_path, :method => :get, :remote => true do
+  %p
+    = text_field_tag :search, params[:search]
+    = submit_tag "Search", :name => nil
+
+%div#shares
+  ~ render :partial => 'shares'
+
 %br
 
 = link_to 'New Share', new_share_path 
