@@ -6,7 +6,7 @@ class Dividend < ActiveRecord::Base
 		if search
 		  find(:all, :conditions => ['share_id LIKE ?', "%#{search}%"])
 		else
-			find(:all)
+			find(:all, :order => "divdate ASC")
     end
 
 	end
