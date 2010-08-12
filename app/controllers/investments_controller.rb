@@ -2,7 +2,7 @@ class InvestmentsController < ApplicationController
   # GET /investments
   # GET /investments.xml
   def index
-    @investments = Investment.all
+    @investments = Investment.search(params[:search]) 
 
     respond_to do |format|
       format.html # index.html.erb
